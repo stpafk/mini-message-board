@@ -1,0 +1,13 @@
+extends layout
+
+block content
+    h1= title 
+
+    form(method='POST', action='/new')
+        div.form-group 
+            label(for='author') Author: 
+            input(type='text', placeholder='author', name='author' required='true')
+        div.form-group 
+            label(for='author') Text: 
+            textarea(type='textarea', placeholder='author', name='message' required='true')
+        button(type='submit') Submit
