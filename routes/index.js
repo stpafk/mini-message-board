@@ -20,8 +20,8 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/new', function(req, res, next) {
-  const userName = req.body.messageUser;
-  const message = req.body.messageText;
+  const userName = req.body.author;
+  const message = req.body.message;
   messages.push({ text: message, user: userName, added: new Date() });
   res.redirect('/');
 });
